@@ -302,7 +302,7 @@ class MTCNN(nn.Module):
             probs = probs[0]
 
         if return_prob:
-            return faces, probs
+            return faces, probs, box
         else:
             return faces
 
