@@ -267,6 +267,7 @@ class MTCNN(nn.Module):
         
         # Process all bounding boxes and probabilities
         faces, probs = [], []
+        box = None
         for im, box_im, prob_im, path_im in zip(img, batch_boxes, batch_probs, save_path):
             if box_im is None:
                 faces.append(None)
